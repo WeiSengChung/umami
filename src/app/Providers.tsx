@@ -20,7 +20,7 @@ function MessagesProvider({ children }) {
   const { locale, messages, dir } = useLocale();
 
   useEffect(() => {
-    //
+    // TESTING
     document.documentElement.setAttribute('dir', dir);
     document.documentElement.setAttribute('lang', locale);
   }, [locale, dir]);
