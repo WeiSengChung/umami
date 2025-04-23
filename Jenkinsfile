@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        SKIP_DB_CHECK = '1'
-    }
-
     tools {
         nodejs 'nodejs-22.13.1'
     }
@@ -12,7 +8,6 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'npm install --global yarn'
                 sh 'yarn install'
             }
         }
