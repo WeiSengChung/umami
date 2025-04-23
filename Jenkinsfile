@@ -1,13 +1,11 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Check Yarn Path') {
-            steps {
-                bat 'where yarn'
-            }
-        }
+    environment {
+        PATH = "C:\\Users\\user\\AppData\\Roaming\\npm;${env.PATH}"
+    }
 
+    stages {
         stage('Install Dependencies') {
             steps {
                 bat 'yarn install'
