@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'nodejs-22.13.1'
-    }
-
     stages {
         stage('Install Dependencies') {
             steps {
