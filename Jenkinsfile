@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'yarn install'
+                bat 'yarn install'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'yarn build'
+                bat 'yarn build'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'yarn test'
+                bat 'yarn test'
             }
         }
     }
