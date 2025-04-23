@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "C:\\Users\\user\\AppData\\Roaming\\npm;${env.PATH}"
+    }
+
     stages {
         stage('Install Dependencies') {
             steps {
